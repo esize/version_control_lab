@@ -1,3 +1,5 @@
+from encode import encode
+
 
 def main():
     while True:
@@ -13,8 +15,7 @@ def main():
             #  Encode
             encoded_password = ''
             password = input("Please enter your password to encode: ")
-            for char in password:
-                encoded_password += str((int(char) + 3))
+            encoded_password = encode(password)
         elif option == 2:
             #  Decode
             break
